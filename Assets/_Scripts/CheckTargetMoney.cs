@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckTargetMoney : MonoBehaviour
@@ -13,7 +11,7 @@ public class CheckTargetMoney : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            GUIManager._instance.Score += 1;
+            GUIManager._instance.Score += Game._instance.ScoreCoin;
         }
     }
 }

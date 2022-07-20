@@ -722,9 +722,9 @@ MonoBehaviour:
   _playerPrefab: {fileID: 3903251476506904999, guid: 64bc6f57428a58942ab558239710c21c, type: 3}
   _gameSpikePrefab: {fileID: 5675979193579053364, guid: 8a1e4ee5a36c35042874ae9d123b3e38, type: 3}
   _gameMoneyPrefab: {fileID: 5055412838933139708, guid: fcd24d12cfb3a9849ae94bf2dd208a27, type: 3}
-  _buttonRestart: {fileID: 218586321}
-  _textWin: {fileID: 1361834930}
-  _textLose: {fileID: 191083086}
+  _buttonRestart: {fileID: 218586323}
+  _textWin: {fileID: 1361834932}
+  _textLose: {fileID: 191083088}
   _spawnPositions:
   - {fileID: 1856431475}
   - {fileID: 1782054222}
@@ -736,7 +736,10 @@ MonoBehaviour:
   - {fileID: 1534855017}
   - {fileID: 1449202327}
   _startPosition: {x: 0, y: 0, z: 0}
-  _speedPlayer: 10
+  _speedPlayer: 12
+  _offsetSpawn: 2
+  _scoreCoin: 1
+  CountMoney: []
   IsLose: 0
 --- !u!1 &963080468
 GameObject:
@@ -869,7 +872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 24.8, y: -11.5}
+  m_AnchoredPosition: {x: 24.800049, y: -11.5}
   m_SizeDelta: {x: 60.9634, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1112913631
@@ -1467,7 +1470,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 78e31c9e6aed05b489e3fd3c836c4e41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1498,8 +1501,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.018405914
-        value: 0.1383934
+        time: 0.026584625
+        value: 0.0758934
         inSlope: 0
         outSlope: 0
         tangentMode: 0

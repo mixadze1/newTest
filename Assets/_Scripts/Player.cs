@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-     private float _speed;
-     private Vector3 _startPosition;
+    private Game _game;
 
     private Trajectory _trajectory;
+
+    private Vector3 _startPosition;
+
+    private float _speed;
+
+    public bool IsDie;
 
     public List<Vector3> MousePositions = new List<Vector3>();
 
 
-    public void Initialize(Trajectory trajectory,Vector3 startPosition, float speed)
+    public void Initialize(Trajectory trajectory, Vector3 startPosition, float speed)
     {
         _trajectory = trajectory;
         _startPosition = startPosition;
@@ -20,10 +25,10 @@ public class Player : MonoBehaviour
     }
 
     private void Update()
-    {             
+    {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            AddPosition();  
+            AddPosition();
         }
         MovePlayer();
     }
@@ -37,8 +42,8 @@ public class Player : MonoBehaviour
     }
 
     private void MovePlayer()
-    {       
-       Vector3 position = SearchPosition();
+    {
+        Vector3 position = SearchPosition();
         transform.position = Vector3.MoveTowards(transform.position, position, Time.deltaTime * _speed);
         if (transform.position == position)
             MousePositions.Remove(position);
@@ -49,8 +54,8 @@ public class Player : MonoBehaviour
         Vector3 positionPlayer = transform.position;
         foreach (var mousePosition in MousePositions)
         {
-                positionPlayer = mousePosition;
-                break;
+            positionPlayer = mousePosition;
+            break;
         }
         return positionPlayer;
     }

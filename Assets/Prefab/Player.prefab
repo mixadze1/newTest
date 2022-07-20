@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adfb14f1103cb7947a64375bc389964e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 3
+  _explosion: {fileID: 3067800026282636833, guid: 11b2ec26632b0a0479f04c906e34e4f9, type: 3}
+  IsDie: 0
   MousePositions: []
 --- !u!114 &1151736342985194973
 MonoBehaviour:
@@ -125,6 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8cf667c3fafcdc4ba12d7a8c82bbe33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _explosion: {fileID: 3067800026282636833, guid: 11b2ec26632b0a0479f04c906e34e4f9, type: 3}
 --- !u!61 &1608065791229930251
 BoxCollider2D:
   m_ObjectHideFlags: 0

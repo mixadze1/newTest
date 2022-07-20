@@ -2,6 +2,4 @@
 
 public class GameThing : MonoBehaviour
 {
-
-
 }

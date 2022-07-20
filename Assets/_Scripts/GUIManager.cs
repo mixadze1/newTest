@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +6,7 @@ public class GUIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _scoreText;
 
     private int _score;
+
     public static GUIManager _instance;
 
     void Awake()
